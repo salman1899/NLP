@@ -60,7 +60,17 @@ def get_prediction_proba(docx):
     b=cvv.transform(a)
     result=model.predict_proba(b)
     return result
-        
+
+def get_prediction_expression(value):
+    if value=="Positive":
+        return "😀"
+    elif value=="Negative":
+        return "☹️"
+    elif value=="Neutral":
+        return "🙂"
+    else:
+        return "Invalid Expression"
+    
 def main():
    st.title("Emotion Classifier App")
    menu=["Home","Help","About"]
@@ -81,6 +91,9 @@ def main():
            predictions=predict_emotions(raw_text)
 
            predictions_proba=get_prediction_proba(raw_text)
+        
+           prediction_Expression=get_prediction_expression(predictions)
+            
            with col1: 
             st.success("Prediction")
             st.write(predictions)
@@ -89,6 +102,8 @@ def main():
            
             
            with col2: 
+            st.success("Sentiment Expression")
+            st.write(prediction_Expression)
             st.success("Original Text")
             st.write(raw_text)   
            
