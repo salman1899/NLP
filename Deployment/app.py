@@ -42,6 +42,8 @@ xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=.2)
 model=RandomForestClassifier()
 model.fit(xtrain,ytrain)
 
+st.image("deploy_image1.jpg",width=700)
+
 def predict_emotions(docx):
       a=text_transformation([docx])
       b=cvv.transform(a)
