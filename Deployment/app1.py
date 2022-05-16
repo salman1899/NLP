@@ -9,7 +9,7 @@ import pickle
 import streamlit as st
 
 
-logi=pickle.load(open("nlp_deploy_model.pkl","rb"))
+logi=pickle.load(open("app1_nlp_deploy_model.pkl","rb"))
 
 def predict_emotions(docx):
       result=logi.predict([docx])
