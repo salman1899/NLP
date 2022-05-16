@@ -1,2 +1,1 @@
-# NLP
-NLP sentiment analysis
+This is sentiment analysis project,taking Redmi 9A Mobile Reviews used those reviews for finding overall sentiment, Intially scrapped the data, then done some analysis using libraries like seaborn,matplotlib,pandas,numpy,pyplot and so on.., done preprocessing convert raw data to understandable data, builded seven models using scikit-learn library after that finalize the Random forest model, Its gives a best accuracy then after that did Deployment.
