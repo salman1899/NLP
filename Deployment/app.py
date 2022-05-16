@@ -16,6 +16,7 @@ from sklearn.ensemble import RandomForestClassifier
 #rf=pickle.load(open("nlp_salman.pkl","rb"))
 import nltk
 nltk.download('stopwords')
+nltk.download('wordnet')
 lm=WordNetLemmatizer()
 def text_transformation(df_col):
     corpus = []
